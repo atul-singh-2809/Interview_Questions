@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int original = sc.nextInt();
+        int reversed = 0, number = original;
+
+        while (number != 0) {
+            reversed = reversed * 10 + number % 10;
+            number /= 10;
+        }
+
+        System.out.println(original == reversed);
+    }
+}
