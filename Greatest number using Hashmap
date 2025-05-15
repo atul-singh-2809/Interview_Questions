@@ -1,0 +1,18 @@
+import java.util.*;
+public class test{
+  public static void main(String[] args){
+    
+    int arr[] ={1,2,3,4,34,5,6};
+    HashMap<Integer, Integer> str = new HashMap<>();
+    for(int i=0;i<arr.length;i++){
+      str.put(i, arr[i]);
+    }
+    int max= Integer.MIN_VALUE;
+    for(int value : str.values()){
+      if(value>max){
+        max=value;
+      }
+    }
+    System.out.println("The greatest number is: " + max);
+  }
+}
