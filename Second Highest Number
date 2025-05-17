@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class test {
+  public static void main(String[] args) {
+    int arr[] = { 1, 4, 5, 3, 4, 8 };
+    HashMap<Integer, Integer> n = new HashMap<>();
+    for (int i = 0; i < arr.length; i++) {
+      n.put(i, arr[i]);
+    }
+    int a = Integer.MIN_VALUE;
+    int b = Integer.MIN_VALUE;
+
+    for (int num : arr) {
+      if (num > a) {
+        b = a;
+        a = num;
+      } else if (num > b && num != a) {
+        b = num;
+      }
+    }
+    if (b == Integer.MIN_VALUE) {
+      System.out.println("No Second highest");
+    } else {
+      System.out.println(b);
+    }
+
+    
+  }
+}
